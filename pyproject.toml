@@ -1,0 +1,31 @@
+[project]
+name = "geologging"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "rmpIGN"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "shapely (>=2.1.0,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "geologging", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+flake8 = "^7.2.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+force_single_line = true
+include_trailing_comma = true
+line_length = 88
+profile = "black"
