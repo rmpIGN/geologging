@@ -1,27 +1,23 @@
-[project]
+[tool.poetry]
 name = "geologging"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "rmpIGN"}
-]
+authors = ["rmpIGN <remi.pas@ign.fr>"]
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "shapely (>=2.1.0,<3.0.0)"
-]
+packages = [{ include = "geologging", from = "src" }]
 
-[tool.poetry]
-packages = [{include = "geologging", from = "src"}]
-
+[tool.poetry.dependencies]
+python = "^3.10"
+shapely = "^2.1.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.1.0"
 isort = "^6.0.1"
-flake8 = "^7.2.0"
+pytest = "^8.3.5"
+
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
